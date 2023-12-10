@@ -3,7 +3,8 @@ import {
     Links,
     Outlet
 } from '@remix-run/react';
-import styles from './styles/index.css';
+import styles from '~/styles/index.css';
+import Header from '~/components/header';
 
 export function meta(){ 
     return (
@@ -17,7 +18,7 @@ export function meta(){
 
 
 export function links(){
-    return (
+    return [
         {
             rel: 'stylesheet',
             href: 'https://necolas.github.io/normalize.css/8.0.1/normalize.css'
@@ -29,7 +30,7 @@ export function links(){
         {
             rel: 'preconnect',
             href: 'https://fonts.gstatic.com',
-            crossorigin : true
+            crossOrigin : "true"
         }, 
         {
             rel: 'stylesheet',
@@ -39,7 +40,7 @@ export function links(){
             rel: 'stylesheet',
             href: styles
         }
-    );
+    ];
 }
 
 export default function App(){
@@ -58,6 +59,7 @@ function Document ({children}){
                 <Links />
             </head>
             <body>
+                <Header/>
                 {children}
             </body>
         </html>
