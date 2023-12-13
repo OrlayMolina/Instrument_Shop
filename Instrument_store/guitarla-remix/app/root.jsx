@@ -12,9 +12,9 @@ import Footer from '~/components/footer';
 export function meta(){ 
     return (
         [
-        { charset: 'utf-8' },
-        { title: 'Guitar - LA - Remix' },
-        { viewport: "width=device-width,initial-scale=1"}
+            { charset: 'utf-8' },
+            { title: 'Guitar - LA - Remix' },
+            { viewport: "width=device-width,initial-scale=1"}
        ]
     )
 };

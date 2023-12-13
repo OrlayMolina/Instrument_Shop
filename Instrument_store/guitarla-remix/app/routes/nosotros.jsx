@@ -1,28 +1,27 @@
-import imagen from '../../public/img/nosotros.jpg';
-import styles from '~/styles/nosotros.css';
+import imagen from '../../public/img/nosotros.jpg'
+import styles from '~/styles/nosotros.css'
 
-export function meta(){
-    // se puede agregar return con un objeto o un array de objetos
+export function meta() {
     return (
         [
             { title: 'GuitarLA - Sobre Nosotros' },
             { description: "Venta de Guitarras y Blog de música"}
-        ]
+       ]
     )
 }
 
-export function link(){
-    return [
-        {
-            rel: 'stylesheet',
-            href: styles
-        },
-        {
-            rel: 'preload',
-            href: imagen,
-            as: 'image'
-        }
-    ]
+export function links() {
+  return [
+    {
+      rel: 'stylesheet',
+      href: styles
+    },
+    {
+      rel: 'preload',
+      href: imagen,
+      as: 'image'
+    }
+  ]
 }
 
 function Nosotros() {
@@ -31,12 +30,12 @@ function Nosotros() {
             <h2 className="heading">Nosotros</h2>
 
             <div className="contenido">
-                <img src={imagen} alt="imagen sobre nosotros" />
+                <img src={imagen} alt="imagen sobre nosotros"/>
 
                 <div>
-                    <p>Nunc sagittis elementum suscipit. Sed auctor, erat at sollicitudin porttitor, lorem neque lacinia metus, tincidunt bibendum eros ante vitae ex. Proin ut semper nulla. Proin scelerisque posuere fermentum. Duis dignissim velit sit amet sem elementum, non semper velit mattis. Donec ullamcorper aliquet turpis vel euismod. Nulla facilisi. Vestibulum in massa quis massa condimentum tristique.</p>
+                    <p>Etiam accumsan est et feugiat dictum. Praesent urna purus, finibus vitae maximus id, gravida a erat. Vivamus aliquet dapibus odio id tincidunt. Quisque commodo lacinia lorem, nec suscipit ligula mollis nec. In pulvinar purus maximus elit sodales feugiat. Sed id turpis risus. Suspendisse neque tortor, tincidunt porttitor risus non, ultrices vehicula eros.</p>
 
-                    <p>Nunc sagittis elementum suscipit. Sed auctor, erat at sollicitudin porttitor, lorem neque lacinia metus, tincidunt bibendum eros ante vitae ex. Proin ut semper nulla. Proin scelerisque posuere fermentum. Duis dignissim velit sit amet sem elementum, non semper velit mattis. Donec ullamcorper aliquet turpis vel euismod. Nulla facilisi. Vestibulum in massa quis massa condimentum tristique.</p>
+                    <p>Etiam accumsan est et feugiat dictum. Praesent urna purus, finibus vitae maximus id, gravida a erat. Vivamus aliquet dapibus odio id tincidunt. Quisque commodo lacinia lorem, nec suscipit ligula mollis nec. In pulvinar purus maximus elit sodales feugiat. Sed id turpis risus. Suspendisse neque tortor, tincidunt porttitor risus non, ultrices vehicula eros.</p>
                 </div>
             </div>
         </main>
