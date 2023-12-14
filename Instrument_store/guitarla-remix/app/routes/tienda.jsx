@@ -3,6 +3,15 @@ import { getGuitarras } from '~/models/guitarras.server';
 import Guitarra from '~/components/guitarra';
 import styles from '~/styles/guitarras.css';
 
+export function meta(){
+    return [
+        {
+            title: 'GuitarLA - Tienda de Guitarras',
+            description: 'GuitarLA - Nuestra Colección de Guitarras'
+        }
+    ]
+}
+
 export function links(){
     return [
         {
