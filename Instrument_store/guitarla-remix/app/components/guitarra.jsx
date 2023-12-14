@@ -1,9 +1,22 @@
-export default function Guitarra({guitarra}) {
+import { Link } from '@remix-run/react';
 
-    console.log(guitarra)
+export default function Guitarra({guitarra}) {
+    
+    const {nombre, precio, url, descripcion, imagen} = guitarra;
+
     return (
-        <div>
-            guitarra
+        <div className="guitarra">
+            <img src={imagen.data.attributes.formats.medium.url} alt={`Imágen guitarra ${nombre}`} />
+            <div className="contenido">
+                <h3>{nombre}</h3>
+                <p className="descripcion">{descripcion[0]?.children[0]?.text}</p>
+                <p className="precio">${precio}</p>
+
+                <Link 
+                    className='enlace' 
+                    to={`/guitarras/${url}`}
+                >Ver Producto</Link>
+            </div>
         </div>
     )
 }
