@@ -4,10 +4,10 @@ import Guitarra from '~/components/guitarra';
 
 export async function loader(){
     const guitarras = await getGuitarras();
-
-    console.log(guitarras.data);
-    return guitarras.data;
+    const guitarrasArray = Object.values(guitarras.data);
+    return guitarrasArray;
 }
+
 
 function Tienda() {
 
@@ -19,9 +19,9 @@ function Tienda() {
 
             {guitarras?.length && (
                 <div className='guitarras-grid'>
-                    {guitarras.map(guitarra => (
+                    {guitarras.map( guitarra => (
                         <Guitarra
-                            key={guitarra?.id}
+                            key={guitarra?.attributes.url}
                             guitarra={guitarra?.attributes}
                         />
                     ))}
