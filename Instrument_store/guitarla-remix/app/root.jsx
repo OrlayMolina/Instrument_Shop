@@ -1,6 +1,7 @@
 import {
     Meta,
     Links,
+    Link,
     Outlet,
     Scripts,
     LiveReload,
@@ -95,6 +96,7 @@ export function ErrorBoundary() {
           <h1 className='error'>
             {error.status} {error.statusText}
           </h1>
+          <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
           <p>{error.data}</p>
         </Document>
       );
@@ -111,6 +113,7 @@ export function ErrorBoundary() {
       return (
         <Document>
           <h1 className='error'>Oh no!</h1>
+          <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
           <p className='error'>Something went wrong and we don't know what.</p>
         </Document>
       )
