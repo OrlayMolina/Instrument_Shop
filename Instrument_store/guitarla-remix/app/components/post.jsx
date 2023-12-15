@@ -2,7 +2,6 @@ import { Link } from '@remix-run/react';
 
 export default function Post({ post }) {
 
-    console.log(post);
     const { contenido, imagen, titulo, url, publishedAt } = post;
 
     return (
