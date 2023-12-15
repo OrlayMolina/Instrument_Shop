@@ -4,3 +4,10 @@ export async function getPosts() {
 
     return result;
 }   
+
+export async function getPost(url){
+    const response = await fetch(`${process.env.API_URL}/posts?filters[url]=${url}&populate=imagen`);
+    const result = await response.json();
+
+    return result;
+}
