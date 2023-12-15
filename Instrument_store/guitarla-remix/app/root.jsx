@@ -1,7 +1,6 @@
 import {
     Meta,
     Links,
-    Link,
     Outlet,
     Scripts,
     LiveReload,
@@ -51,9 +50,11 @@ export function links(){
 
 export default function App(){
     return (
+
         <Document>
             <Outlet />
         </Document>
+
     );
 }
 
@@ -78,21 +79,40 @@ function Document ({children}){
 /* Manejo de Errores */
 export function CatchBoundary() {
     const error = useRouteError()
-    if(isRouteErrorResponse(error)){
-        return (
-            <Document>
-                <p className='error'>{error.status } {error.statusText}</p>
-                <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
-            </Document>
-        )
-    }
-}
-
-export function ErrorBoundary({error}) {
     return (
         <Document>
             <p className='error'>{error.status } {error.statusText}</p>
-            <Link className='error-enlace' to="/">Tal vez quieras volvera a la página principal</Link>
         </Document>
     )
 }
+
+export function ErrorBoundary() {
+    const error = useRouteError();
+  
+    if (isRouteErrorResponse(error)) {
+      return (
+        <Document>
+          <h1 className='error'>
+            {error.status} {error.statusText}
+          </h1>
+          <p>{error.data}</p>
+        </Document>
+      );
+    } else if (error instanceof Error) {
+      return (
+        <Document>
+          <h1 className='error'>Error</h1>
+          <p>{error.message}</p>
+          <p>The stack trace is:</p>
+          <pre>{error.stack}</pre>
+        </Document>
+      );
+    } else {
+      return (
+        <Document>
+          <h1 className='error'>Oh no!</h1>
+          <p className='error'>Something went wrong and we don't know what.</p>
+        </Document>
+      )
+    }
+  }
