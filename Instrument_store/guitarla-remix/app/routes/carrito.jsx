@@ -9,6 +9,15 @@ export function links(){
     ]
 }
 
+export function meta(){
+    return [
+        {
+            title: 'GuitarLA - Carrito de Compras',
+            description: 'Venta de guitarras, música, blog, carrito de compras, tienda'
+        }
+    ]
+}
+
 function Carrito() {
     return (
         <main className="contenedor">
