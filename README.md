@@ -23,12 +23,3 @@ Tienda de instrumentos GuitarLA
 
 
 </a>
-
-<b>Proyecto terminado</b>
-
-<a href="https://orlay-andres-molina-proyecto10.netlify.app/" target="_blank">
-
-![react](https://github.com/OrlayMolina/Instrument_Shop/assets/111409267/fc97d939-984c-413d-a180-9b4311522b0d)
-
-
-</a>
